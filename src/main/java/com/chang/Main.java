@@ -71,8 +71,11 @@ public class Main {
     @PutMapping("{customerId}")
     public void updateCustomer(@PathVariable("customerId") Integer id,
                                @RequestBody NewCustomerRequest request) {
-        Customer customer = new Customer();
-
+        Customer customer = customerRepository.findById(id).orElseThrow();
+        customer.setName(request.name);
+        customer.setEmail(request.email);
+        customer.setAge(request.age);
+        customerRepository.save(customer);
     }
 
 }
