@@ -11,9 +11,6 @@ import java.util.List;
 
 //Annotations that wrap annotations like: @ComponentScan, @EnableAutoConfiguration and @Configuration
 @SpringBootApplication
-//@ComponentScan(basePackages = "com.chang")
-//@EnableAutoConfiguration
-//@Configuration
 @RestController
 
 public class Main {
@@ -24,11 +21,6 @@ public class Main {
     ArrayList<String> followers = new ArrayList<String>(List.of(new String[]{"Kyle", "Kenney", "Timmy", "Eric"}));
 
     @GetMapping("/whatever")
-//    public GreetResponse somethingelse() {
-//        return new GreetResponse("Hello from GreetResponse");
-//    }
-
-
     public GreetResponse welcome() {
         GreetResponse response = new GreetResponse("Welcome to Greeting",
                 false, followers,
