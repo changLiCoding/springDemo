@@ -13,7 +13,7 @@ public class CustomerController {
     public CustomerController(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
-    
+
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
 
