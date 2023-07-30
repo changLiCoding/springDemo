@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5332/customer
+    url: jdbc:postgresql://localhost:5432/postgres
     username: changli
     password: password
   jpa:
@@ -14,5 +14,10 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+
+  security:
+    user:
+      name: admin
+      password: admin
   main:
     web-application-type: servlet
